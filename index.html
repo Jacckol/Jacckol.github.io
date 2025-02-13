@@ -1,0 +1,232 @@
+<!DOCTYPE html> 
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FACSO - Entre líneas</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: italic;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        .top-bar {
+            background: black;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-size: 14px;
+        }
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: white;
+            box-shadow: 0px 4px 2px -2px gray;
+        }
+        .header-container h1 {
+            font-family: serif;
+            font-style: italic;
+            font-weight: normal;
+            font-size: 24px;
+            margin: 0;
+        }
+        .search-box {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .nav-bar {
+            background: #f0f2f5;
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+        }
+        main {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+        .container {
+            display: flex;
+            width: 80%;
+            gap: 20px;
+        }
+        .content {
+            width: 65%;
+            background: white;
+            padding: 20px;
+            box-shadow: 0px 4px 2px -2px gray;
+        }
+        aside {
+            width: 30%;
+            background: white;
+            padding: 20px;
+            box-shadow: 0px 4px 2px -2px gray;
+        }
+        img {
+            width: 40%;
+            max-height: 240px;
+            object-fit: cover;
+            display: block;
+            margin: 20px auto;
+            border-radius: 10px;
+        }
+        footer {
+            background: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0px -4px 2px -2px gray;
+            margin-top: 20px;
+        }
+        footer ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: left;
+        }
+        footer li {
+            margin: 10px 0;
+        }
+        footer a {
+            text-decoration: none;
+            color: rgba(88, 88, 135, 0.927);
+            opacity: 0.8;  /* Opacidad para los enlaces */
+            transition: color 0.3s ease;
+        }
+        footer a:hover {
+            color: #4CAF50;  /* Color verde al pasar el ratón */
+        }
+        /* Estilo para la tarjeta de bienvenida */
+        .newsletter {
+            background: #f5f5f5;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .newsletter h3 {
+            color: rgba(0, 0, 0, 0.8);
+            font-size: 1.5em;
+        }
+        .newsletter p {
+            color: rgba(0, 0, 0, 0.7);
+        }
+        .newsletter input {
+            padding: 10px;
+            width: calc(100% - 22px);
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .newsletter button {
+            padding: 10px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+        .newsletter button:hover {
+            background: #503333;
+        }
+        .recent-posts {
+            margin-top: 20px;
+        }
+        .recent-posts ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .recent-posts li {
+            background: #f0f2f5;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .recent-posts a {
+            text-decoration: none;
+            color: rgba(123, 123, 178, 0.9);
+            opacity: 0.8;
+            font-weight: bold;
+        }
+        .recent-posts a:hover {
+            color: #4CAF50;
+        }
+        /* Nuevo Estilo para Mejorar la Responsividad */
+        @media screen and (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                width: 90%;
+            }
+            .content, aside {
+                width: 100%;
+            }
+            .header-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            .search-box {
+                width: 80%;
+                margin-top: 10px;
+            }
+        }
+    </style>
+    
+
+</head>
+<body>
+    <div class="top-bar">Diseña un sitio como este con WordPress.com <button>Comenzar</button></div>
+    <div class="header-container">
+        <h1>Constelaciones del Pensamiento</h1>
+        <input type="text" class="search-box" placeholder="Search...">
+    </div>
+    <div class="nav-bar">VERDAD</div>
+    <main>
+        <div class="container">
+            <section class="content">
+                <h1>¿Qué es la verdad?</h1>
+                <p><strong>La verdad</strong> La verdad es «la coincidencia entre una afirmación y los hechos, o la realidad a la que dicha afirmación se refiere». Esta es la tradicional definición de verdad sustentada en una concordancia entre la representación mental-verbal y la realidad externa. De este modo, la verdad implicaría una relación entre el pensamiento de un sujeto (una inteligencia) y un objeto (realidad material). Aun así, el propio concepto de verdad cuenta con tantos matices y variedades como explicaciones, por lo que no puede reducirse a una definición única. </p>
+                
+                <img src="./img/imagen1.jpeg" alt="Imagen sobre la verdad">
+                
+                <div class="recent-posts">
+                    <ul>
+                        
+                        <li><a href="./tipos.html">Tipos de verdad</a></li>
+                        <li><a href="#">Desinformación</a></li>
+                    </ul>
+                </div>
+                <h2>Conclusiones</h2>
+                <p> Los algoritmos y la IA están estrechamente relacionados con la verdad, ya que influyen directamente en cómo se genera, distribuye y percibe la información. Cuando los algoritmos de IA crean contenido educativo o de otra índole, tienen el poder de mezclar hechos con ficción, amplificar desinformación y afectar la forma en que las personas comprenden la realidad. En un contexto educativo, esto plantea desafíos significativos en cuanto a la veracidad de los contenidos, la regulación de las tecnologías y la protección contra la distorsión de la información.
+                </p>
+            </section>
+            <aside>
+                <div class="newsletter">
+                    <h3>Bienvenidos a Constelaciones del Pensamiento!</h3>
+                    <p>Somos Jordan Quinteros y Gustavo Acero, estudiantes de la Facultad de Comunicación Social de la Universidad Central del Ecuador. En este espacio, exploramos ideas, cuestionamos la realidad y buscamos acercarnos a la verdad desde distintas perspectivas. Porque, como nos enseña la Epistemología, el conocimiento no es absoluto, pero siempre podemos afinar nuestras preguntas.
+                        ¡Acompáñanos en este viaje de análisis y reflexión!
+                    </p>
+                    <input type="email" placeholder="Escribe tu correo electrónico...">
+                    <button>Suscribirse</button>
+                </div>
+            </aside>
+        </div>
+    </main>
+    <footer>
+        <h3>REFERENCIAS:</h3>
+        <ul>
+            <li><a href="https://concepto.de/verdad/" target="_blank">https://concepto.de/verdad/</a></li>
+            <li><a href="https://fundacionspeiro.org/revista-verbo/1967/51/documento-4711" target="_blank">https://fundacionspeiro.org/revista-verbo/1967/51/documento-4711</a></li>
+            <li><a href="https://raed.academy/una-verdad-historica/" target="_blank">https://raed.academy/una-verdad-historica/</a></li>
+            <li><a href="https://repository.udem.edu.co/handle/11407/7679" target="_blank">https://repository.udem.edu.co/handle/11407/7679</a></li>
+            <li><a href="https://revistas.ucm.es/index.php/DERE/article/view/92954/4564456567645" target="_blank">https://revistas.ucm.es/index.php/DERE/article/view/92954/4564456567645</a></li>
+            <li><a href="https://www.ifj.org/fileadmin/user_upload/Fake_News_-_FIP_AmLat.pdf" target="_blank">https://www.ifj.org/fileadmin/user_upload/Fake_News_-_FIP_AmLat.pdf</a></li>
+        </ul>
+    </footer>
+</body>
+</html>
