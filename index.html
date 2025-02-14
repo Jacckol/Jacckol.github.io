@@ -39,6 +39,11 @@
             border: 1px solid #ccc;
             border-radius: 5px;
         }
+        .autores {
+            font-size: 14px;
+            color: gray;
+            margin-top: 5px;
+        }
         .nav-bar {
             background: #f0f2f5;
             padding: 10px;
@@ -175,6 +180,18 @@
                 margin-top: 10px;
             }
         }
+     
+        .info-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start; /* Alinea el texto a la izquierda */
+            margin-top: 5px;
+        }
+        .autores, .subject {
+            font-size: 14px;
+            color: gray;
+            font-style: italic;
+        }
     </style>
     
 
@@ -183,6 +200,10 @@
     <div class="top-bar">Diseña un sitio como este con WordPress.com <button>Comenzar</button></div>
     <div class="header-container">
         <h1>Constelaciones del Pensamiento</h1>
+        <div class="info-container">
+            <p class="autores">Autores: Jordan Quinteros y Gustavo Acero</p>
+            <p class="subject">Materia: Epistemología</p>
+        </div>
         <input type="text" class="search-box" placeholder="Search...">
     </div>
     <div class="nav-bar">VERDAD</div>
