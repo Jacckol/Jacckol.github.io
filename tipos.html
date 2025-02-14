@@ -1,13 +1,13 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FACSO - Entre líneas</title>
+    <title>Constelaciones del Pensamiento</title>
     <link rel="stylesheet" href="styles.css">
     <style>
         body {
-            font-family: italic;
+            font-family: serif;
             margin: 0;
             padding: 0;
             background-color: #f8f8f8;
@@ -28,7 +28,6 @@
             box-shadow: 0px 4px 2px -2px gray;
         }
         .header-container h1 {
-            font-family: serif;
             font-style: italic;
             font-weight: normal;
             font-size: 24px;
@@ -52,9 +51,15 @@
         }
         .container {
             display: flex;
-            width: 80%;
-            gap: 20px;
-        }
+    align-items: flex-start;
+    gap: 20px;
+}
+.container img{
+    max-width: 200px; /* Ajusta el tamaño de la imagen según necesites */
+    height: auto;
+    border-radius: 8px;
+}
+
         .content {
             width: 65%;
             background: white;
@@ -68,12 +73,20 @@
             box-shadow: 0px 4px 2px -2px gray;
         }
         img {
-            width: 40%;  /* Reducido el tamaño de la imagen */
-            max-height: 240px;
+            width: 60%;
+            max-height: 260px;
             object-fit: cover;
             display: block;
-            margin: 20px auto;
+            margin: 10px;
             border-radius: 10px;
+        }
+        .img-left {
+            float: left;
+            margin-right: 15px;
+        }
+        .img-right {
+            float: right;
+            margin-left: 15px;
         }
         footer {
             background: white;
@@ -93,13 +106,12 @@
         footer a {
             text-decoration: none;
             color: rgba(88, 88, 135, 0.927);
-            opacity: 0.8;  /* Opacidad para los enlaces */
+            opacity: 0.8;
             transition: color 0.3s ease;
         }
         footer a:hover {
-            color: #4CAF50;  /* Color verde al pasar el ratón */
+            color: #4CAF50;
         }
-        /* Estilo para la tarjeta de bienvenida */
         .newsletter {
             background: #f5f5f5;
             padding: 20px;
@@ -107,7 +119,6 @@
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
         }
         .newsletter h3 {
-            color: rgba(0, 0, 0, 0.8);
             font-size: 1.5em;
         }
         .newsletter p {
@@ -132,87 +143,50 @@
         .newsletter button:hover {
             background: #503333;
         }
-        .recent-posts {
-            margin-top: 20px;
+        .comments-box {
+            width: 100%;
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0px 4px 2px -2px gray;
+            border-radius: 8px;
+            text-align: center;
         }
-        .recent-posts ul {
-            list-style-type: none;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-        .recent-posts li {
-            background: #f0f2f5;
+        .comments-box textarea {
+            width: 100%;
             padding: 10px;
+            border: 1px solid #ccc;
             border-radius: 5px;
-            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+            margin-top: 10px;
+            height: 120px;
+            resize: none;
         }
-        .recent-posts a {
+        .comments-box button {
+            margin: 10px auto;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .comments-box button:hover {
+            background-color: #503333;
+        }
+        .pagination {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .pagination a {
             text-decoration: none;
-            color: rgba(123, 123, 178, 0.9);
-            opacity: 0.8;
+            color: #4CAF50;
+            margin: 0 15px;
             font-weight: bold;
         }
-        .recent-posts a:hover {
-            color: #4CAF50;
+        .pagination a:hover {
+            color: #503333;
         }
-/* Estilo del cuadro de comentarios */
-.comments-box {
-    width: 100%;
-    max-width: 600px; /* Ajustar el tamaño máximo */
-    margin: 20px auto; /* Centrar el cuadro en la página */
-    background-color: white;
-    padding: 20px;
-    box-shadow: 0px 4px 2px -2px gray;
-    border-radius: 8px;
-    text-align: center; /* Centrar el contenido dentro del cuadro */
-}
-
-.comments-box textarea {
-    width: 100%;
-    max-width: 500px; /* Ancho máximo ajustado */
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-top: 10px;
-    height: 120px; /* Ajuste de altura */
-    resize: none;
-}
-
-.comments-box button {
-    display: block; /* Para que el botón esté debajo del cuadro de texto */
-    margin: 10px auto; /* Centrar el botón */
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.comments-box button:hover {
-    background-color: #503333;
-}
-
-/* Estilo para los enlaces de Anterior y Siguiente */
-.pagination {
-    margin-top: 20px; /* Separar los enlaces del botón */
-    text-align: center; /* Centrar los enlaces */
-}
-
-.pagination a {
-    text-decoration: none;
-    color: #4CAF50;
-    margin: 0 15px; /* Espacio entre los enlaces */
-    font-weight: bold;
-}
-
-.pagination a:hover {
-    color: #503333;
-}
-
-        /* Nuevo Estilo para Mejorar la Responsividad */
         @media screen and (max-width: 768px) {
             .container {
                 flex-direction: column;
@@ -231,8 +205,8 @@
             }
         }
         p {
-            line-height: 1.6; /* Añadir espacio entre líneas */
-            text-align: justify; /* Justificar el texto para que se vea uniforme */
+            line-height: 1.6;
+            text-align: justify;
         }
     </style>
 </head>
@@ -242,56 +216,70 @@
         <h1>Constelaciones del Pensamiento</h1>
         <input type="text" class="search-box" placeholder="Search...">
     </div>
-    <div class="nav-bar">VERDAD</div>
+    <div class="nav-bar">
+        <a href="./index.html">VERDAD</a>
+      </div>
+      
     <main>
         <div class="container">
             <section class="content">
                 <h1>Tipos de verdad </h1>
                 <h3>Verdad moral</h3>
-                <p> La verdad moral es aquella que orienta la conducta humana hacia el bien, distinguiéndola de la simple verdad 
+                <p> <img src="./img/imagen2.jpeg" alt="Imagen sobre la verdad" class="img-left">La verdad moral es aquella que orienta la conducta humana hacia el bien, distinguiéndola de la simple verdad 
                     teórica. Mientras que el conocimiento teórico busca comprender y describir la realidad tal como es, la verdad
+                   
                      moral implica un compromiso con la acción, pues conocer el bien implica la responsabilidad de practicarlo.
                     El carácter práctico de la verdad moral se debe a su relación con la voluntad. No es suficiente con reconocer
                     lo correcto; es necesario quererlo y actuar en consecuencia. De ahí que la moralidad no se reduce a un conjunto de normas externas, 
                     sino que requiere de una conciencia bien formada, capaz de discernir lo justo en cada situación.
                      </p>
                 
-                <img src="./img/imagen2.jpeg" alt="Imagen sobre la verdad">
-
+<br>
+<br><br>
                 <h3>Verdad religiosa </h3>
-                <p> Se fundamenta en la relación esencial entre la creación y Dios. No es un elemento accesorio,
+                <p class="texto">  <img src="./img/imagen3.jpeg" alt="Imagen sobre la verdad" class="img-right">Se fundamenta en la relación esencial entre la creación y Dios. No es un elemento accesorio,
                      sino una característica intrínseca de todas las cosas, que existen y actúan en dependencia de Dios.
                       El ser humano, por su capacidad racional y libertad, es el único que puede tomar conciencia de esta 
                       verdad, pero su entendimiento es limitado e imperfecto. La verdad religiosa implica reconocer el orden 
                       divino en todo lo creado y orientar todas las acciones hacia Dios. Además, en el plano sobrenatural, 
                       la verdad religiosa no depende de la interpretación humana, sino que está determinada.
                      </p>
-                     <img src="./img/imagen3.jpeg" alt="Imagen sobre la verdad">
-
+                    
+<br>
                      <h3>Verdad Historia </h3>
                 <p> La Historia, antes vista como un relato moral o heroico, comenzó a transformarse en una ciencia en el Renacimiento. 
-                    Este cambio se atribuye a avances como los descubrimientos geográficos y el desarrollo de la cartografía, que exigían una mayor veracidad y datos verificables.
-                    Tierno destaca que, inicialmente, la Historia se concebía como una forma de documentar la verdad, construyendo una imagen precisa del pasado. Sin embargo, con el tiempo,
+                     Este cambio se atribuye a avances como los descubrimientos geográficos y el desarrollo de la cartografía, que exigían una mayor veracidad y datos verificables.
+                      Tierno destaca que, inicialmente, la Historia se concebía como una forma de documentar la verdad, construyendo una imagen precisa del pasado. Sin embargo, con el tiempo,<img src="./img/imagen4.jpeg" alt="Imagen sobre la verdad" class="img-left">
                     la Historia perdió este carácter objetivo, dando paso a la relativización e interpretación de los hechos. Hoy en día, el conocimiento histórico se basa en una multiplicidad 
                     de interpretaciones, lo que ha conducido a una mayor flexibilidad sobre lo que se considera "verdad histórica". Esto ha abierto el camino a la posverdad, donde las interpretaciones históricas son más importantes que los hechos.
                     </p>
-                     <img src="./img/imagen4.jpeg" alt="Imagen sobre la verdad">
+                    <br>
 
                      <h3>Verdad Política </h3>
-                <p>  La verdad política se refiere a una verdad que está vinculada con la acción política y la vida pública, 
+                <p>   <img src="./img/imagen5.jpeg" alt="Imagen sobre la verdad" class="img-right"> La verdad política se refiere a una verdad que está vinculada con la acción política y la vida pública, 
                      pero que no debe ser entendida como absoluta o inmutable. Es una verdad que está sujeta a la crítica,
                      al contraste con diferentes puntos de vista y a la reflexión colectiva. Es fundamental para la cooperación
                      interpersonal y la construcción de un mundo público confiable. Sin embargo, en los regímenes totalitarios, 
                      la verdad es manipulada y distorsionada a través de la mentira, lo que destruye los referentes confiables y socava la acción política genuina.
                      </p>
-                     <img src="./img/imagen5.jpeg" alt="Imagen sobre la verdad">
+                    <br>
 
                      <h3>Verdad Epistemológica </h3>
-                <p> La verdad epistemológica, en este contexto, se refiere a la necesidad de que el proceso judicial logre  establecer una comprensión verídica de los hechos, basada en el conocimiento experto y científico, pero también influenciada
+                <p>  <img src="./img/imagen6.jpeg" alt="Imagen sobre la verdad" class="img-left">La verdad epistemológica, en este contexto, se refiere a la necesidad de que el proceso judicial logre  establecer una comprensión verídica de los hechos, basada en el conocimiento experto y científico, pero también influenciada
                      por la valoración crítica que hace el juez de las pruebas presentadas. En los casos complejos, la verdad no se logra automáticamente a través de la prueba pericial, sino que depende de cómo se configura y se valora esa prueba dentro del proceso judicial.
                    "Las pruebas servirían para hacer creer que el proceso determina la verdad de los hechos, porque es útil que los ciudadanos lo piensen, aunque en realidad esto no suceda y quizás precisamente porque en realidad eso no sucede." (Taruffo, 2005, p. 81)
                    </p>
-                     <img src="./img/imagen6.jpeg" alt="Imagen sobre la verdad">
+<br>
+                     <h3>Verdad Informática </h3>
+                <p>  La verdad informativa se refiere a la necesidad de que la información proporcionada a la sociedad sea exacta, veraz y confiable. Es un concepto estrechamente vinculado al derecho a la información, entendido como un derecho humano fundamental que permite a las personas acceder, investigar y difundir información. Este derecho solo puede ser ejercido adecuadamente si la información que se ofrece es verdadera, ya que la falsedad, la incompletitud o la manipulación de datos obstruyen gravemente la libertad y la toma de decisiones informadas por parte de los ciudadanos.
+                    La verdad informativa no se limita solo a la veracidad de los hechos, sino que también implica una responsabilidad ética y  <img src="./img/imagen7.jpeg" alt="Imagen sobre la verdad" class="img-right">profesional en su divulgación, especialmente en los medios de comunicación. Estos tienen la tarea de asegurar que la información que difunden sea auténtica, precisa y útil para que los individuos puedan participar activamente en la sociedad, tomar decisiones informadas y contribuir al bienestar colectivo.
+                   </p> 
+                     <p class="texto">De Santiago Freda, M. (s.f.). El problema de la verdad informativa: una perspectiva filosófica iusinformativa. <br>
+                         "La verdad está estrechamente ligada al proceso informativo entero y a la realización del derecho humano a la información. <br>
+                         En casi la totalidad de los códigos deontológicos periodísticos y en las obligaciones jurídicas que conlleva el ejercicio <br>
+                          de dicha prerrogativa está presente. Se trata de la característica más valorada de la información y, en consecuencia, <br>
+                           constituye un límite interno en su relación con la potestad del ser humano de recibirla, investigarla o difundirla." (p. 2).</p>
+                    
 
             </section>
             <aside>
@@ -302,6 +290,13 @@
                     </p>
                     <input type="email" placeholder="Escribe tu correo electrónico...">
                     <button>Suscribirse</button>
+                </div>
+                <div class="recent-posts">
+                    <h3><em>Entradas recientes</em></h3>
+                    <ul>
+                        <li><a href="./index.html">Que es la verdad</a> <span style="float: right;"><a href="./algoritmo.html">Algoritmo</a></span></li>
+                        <li><a href="./desinformacion.html">Desinformación</a><span style="float: right;"><a href="./fake.html">Fake News</a></span></li>
+                    </ul>
                 </div>
             </aside>
         </div>
@@ -317,7 +312,7 @@
     </div>
     <!-- Enlaces de Siguiente y Anterior debajo del cuadro de comentarios -->
     <div class="pagination">
-        <a href="#anterior">Anterior</a> | <a href="#siguiente">Siguiente</a>
+        <a href="./desinformaciom.html">Anterior</a> | <a href="./fake.html">Siguiente</a>
     </div>    <footer>
         <h3>REFERENCIAS:</h3>
         <ul>
